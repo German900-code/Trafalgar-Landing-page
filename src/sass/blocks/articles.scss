@@ -1,0 +1,145 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as mixins;
+
+.articles {
+    position: relative;
+    margin-top: 222px;
+
+    &__wrapper {
+        display: flex;
+        flex-direction: row;
+        gap: 35px;
+        // margin-top: 72px;
+    }
+
+    &__item {
+        border-radius: 20px;
+        box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+        background: rgb(255, 255, 255);
+
+        &-img {
+            width: 100%;
+        }
+
+        &-block {
+            margin: 24px 52px 12px 33px;
+        }
+
+        &-title {
+            color: $black;
+            font-size: 21px;
+            font-weight: 700;
+            line-height: 32px;
+            text-align: left;
+        }
+
+        &-subtitle {
+            color: $grey;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: left;
+            margin: 12px 0 25px;
+        }
+
+        &-button {
+            margin: 0 0 35px -5px;
+            color: rgb(64, 137, 237);
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 28px;
+            text-align: left;
+            background-color: $light;
+            border: none;
+            cursor: pointer;
+
+            &:hover {
+                transform: translateX(30px);
+                transition: all 0.8s;
+            }
+
+            img {
+                transform: rotate(270deg);
+                display: inline-block;
+                margin-left: 20px;
+                margin-bottom: -2px;
+            }
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        top: 110px;
+        left: 270px;
+        z-index: -1;
+
+        // margin-top: 67px;
+        &-foot {
+            position: absolute;
+            bottom: -257px;
+            z-index: -1;
+            right: 116px;
+        }
+    }
+
+    &__drop {
+        position: absolute;
+        right: 0;
+        top: 0;
+        z-index: -1;
+    }
+
+    &__divider {
+        margin-bottom: 72px;
+    }
+
+    &__button {
+        background-color: $light;
+        width: 200px;
+        height: 60px;
+        display: block;
+        margin: 72px auto;
+        color: rgb(69, 143, 246);
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 60px;
+        border: 1.4px solid rgb(69, 143, 246);
+        border-radius: 55px;
+        cursor: pointer;
+        transition: color 0.4s ease-in-out, border-color 0.4s ease-in-out;
+
+        &:hover {
+            background-color: $light-blue;
+            color: $light;
+        }
+    }
+}
+
+.section-title {
+
+    @include mixins.section-title;
+}
+
+@media screen and (max-width: 768px) {
+    .articles {
+        &__dots {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .articles {
+        margin-top: 30px;
+
+        &__wrapper {
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &__item {
+            width: 400px;
+        }
+    }
+}

@@ -1,0 +1,138 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.footer {
+    background: linear-gradient(211.68deg, rgb(103, 195, 243) 8.549%, rgb(90, 152, 242) 70.494%);
+    padding-bottom: 113px;
+    margin-top: 201px;
+    position: relative;
+
+    &__wrapper {
+        position: relative;
+        padding-top: 118px;
+        display: flex;
+        justify-content: space-around;
+        gap: 50px;
+
+        &-wide {
+            width: 391px;
+            // height: 201px;
+        }
+
+        &-descr,
+        &-text,
+        &-links a {
+            color: rgb(255, 255, 255);
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: left;
+            text-decoration: none;
+        }
+
+        &-title {
+            color: rgb(255, 255, 255);
+            font-size: 20px;
+            font-weight: 700;
+            line-height: 60px;
+            text-align: left;
+        }
+
+        &-links,
+        &-text {
+            margin-bottom: 10px;
+        }
+
+        &-links a {
+            &:hover {
+                color: $black;
+            }
+        }
+
+        &-copyright {
+            margin-top: 31px;
+            color: rgb(255, 255, 255);
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: left;
+        }
+    }
+
+    &__logo {
+        border-radius: 100%;
+        width: 41px;
+        height: 41px;
+        margin-bottom: 17px;
+        // position: relative;
+
+        &-text {
+            color: rgb(255, 255, 255);
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 30px;
+            text-align: left;
+            position: absolute;
+            // top: 10px;
+            top: 125px;
+            right: 950px;
+        }
+
+
+    }
+
+    &__light-dots {
+        position: absolute;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer {
+        position: relative;
+
+        &__wrapper {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            &-wide {
+                width: 100%;
+            }
+        }
+
+        &__logo-text {
+            position: absolute;
+            left: 50px;
+            // top: 125px;
+
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer {
+        position: relative;
+
+        &__logo-text {
+            position: absolute;
+            right: 550px;
+            top: 125px;
+
+        }
+
+        &__light-dots,
+        &__dots {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .footer {
+        position: relative;
+
+        &__logo-text {
+            position: absolute;
+            right: 550px;
+        }
+    }
+}

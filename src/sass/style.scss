@@ -1,0 +1,15 @@
+@use "swiper/css";
+@use "swiper/css/navigation";
+@use "swiper/css/pagination";
+
+@use "/src/sass/libs/modern-normalize.min.css";
+@use "/src/sass/base/variables.scss";
+@use "/src/sass/base/basic.scss";
+@use "/src/sass/base/mixins.scss";
+
+@use "/src/sass/blocks/header.scss";
+@use "/src/sass/blocks/services.scss";
+@use "/src/sass/blocks/providers.scss";
+@use "/src/sass/blocks/slides.scss";
+@use "/src/sass/blocks/articles.scss";
+@use "/src/sass/blocks/footer.scss";

@@ -1,0 +1,110 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as mixins;
+
+.providers {
+    margin-top: 230px;
+    position: relative;
+
+    h2 {
+        @include mixins.section-subtitle;
+    }
+
+    &__healthcare {
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 137px;
+
+        &-block {
+            width: 486px;
+            height: 388px;
+        }
+
+        &-descr {
+            color: $grey;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 30px;
+            text-align: left;
+            margin-bottom: 37px;
+        }
+    }
+
+    &__divider {
+        margin-left: 0;
+        margin-bottom: 31px;
+    }
+
+    &__apps {
+        margin-top: 220px;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        column-gap: 137px;
+
+        &-block {
+            width: 486px;
+            height: 388px;
+        }
+
+        &-descr {
+            color: $grey;
+            font-size: 18px;
+            font-weight: 300;
+            line-height: 30px;
+            text-align: left;
+            margin-bottom: 37px;
+        }
+    }
+
+    // &__divider {
+    //     margin-left: 0;
+    //     margin-bottom: 31px;
+    // }
+
+    // &__dots {
+    //     position: absolute;
+    //     top: 20px;
+    //     right: -40px;
+    // }
+    &__button {
+        position: relative;
+        padding: 20px 37px 21px 43px;
+    }
+
+    &__arrow {
+        // margin: 20px 43px 20px 14px;
+        position: absolute;
+        top: 22px;
+        right: 30px;
+        // right: ;
+    }
+}
+
+.button__arrow {
+    padding: 20px 55px 21px 43px;
+}
+
+@media screen and (max-width: 1200px) {
+    .providers {
+        margin-top: 80px;
+
+        &__healthcare,
+        &__apps {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+
+        &__healthcare {
+            &-block {
+                width: auto;
+            }
+        }
+
+        &__apps {
+            margin-top: 100px;
+
+            &-block {
+                width: auto;
+            }
+        }
+    }
+}

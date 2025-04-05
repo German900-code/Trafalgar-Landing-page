@@ -1,0 +1,95 @@
+@use "/src/sass/base/variables.scss" as *;
+
+h1,
+h2,
+h3,
+h4,
+h5,
+figure,
+p,
+ol,
+ul {
+    margin: 0;
+}
+
+ol[role="list"],
+ul[role="list"] {
+    list-style: none;
+    padding-inline: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+img {
+    display: block;
+    max-inline-size: 100%;
+}
+
+html {
+    font-family: "Nunito Sans", sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: $light;
+    // overflow: hidden;
+}
+
+.container {
+    width: 100%;
+    padding: 0 10px;
+    // overflow: hidden;
+}
+
+.button {
+    display: block;
+    width: 200px;
+    height: 60px;
+    color: $light-blue;
+    font-size: 18px;
+    font-weight: 700;
+    border: 1px solid $light-blue;
+    border-radius: 55px;
+    background-color: $light;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $light-blue;
+        border: none;
+        color: $light;
+    }
+}
+
+.divider {
+    width: 56px;
+    height: 2px;
+    border-radius: 5px;
+    background: $black;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        max-width: 720px;
+        padding: 0;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media screen and (min-width: 1920px) {
+    .container {
+        min-width: 1440px;
+    }
+}

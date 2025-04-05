@@ -1,0 +1,22 @@
+{
+  "name": "trafalgar-landing-page",
+  "version": "1.0.0",
+  "description": "\"Landing page for Trafalgar\"",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Landing",
+    "page"
+  ],
+  "author": "German Voloshyn",
+  "license": "ISC",
+  "devDependencies": {
+    "sass": "^1.86.0",
+    "vite": "^6.2.3"
+  },
+  "dependencies": {
+    "swiper": "^11.2.6"
+  }
+}

@@ -1,0 +1,230 @@
+@use "/src/sass/base/variables.scss" as *;
+
+.slides {
+    margin: 222px 0 257px 0;
+    position: relative;
+
+    &__item {
+        height: 425px;
+        border-radius: 24px;
+        background: linear-gradient(222.85deg, rgb(103, 195, 243) 10.315%, rgb(90, 152, 242) 75.633%);
+
+        &-title {
+            color: rgb(255, 255, 255);
+            font-size: 36px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: center;
+            padding-top: 50px;
+            // padding: 64px 0 0 315px;
+        }
+
+        &-block {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+        }
+    }
+
+    &__info {
+        display: flex;
+        align-items: center;
+        gap: 33px;
+
+        &-name {
+            color: rgb(255, 255, 255);
+            font-size: 22px;
+            font-weight: 700;
+            line-height: 48px;
+            text-align: left;
+        }
+
+        &-founder {
+            color: rgba(255, 255, 255, 0.85);
+            font-size: 18px;
+            font-weight: 400;
+            text-align: left;
+        }
+    }
+
+    &__feedback {
+        width: 420px;
+        color: rgba(255, 255, 255, 0.9);
+        font-size: 19px;
+        font-weight: 400;
+        line-height: 30px;
+        text-align: left;
+    }
+
+    &__divider {
+        background-color: $light;
+    }
+
+    &__dots {
+        position: absolute;
+        left: 270px;
+        bottom: 50px;
+
+        &-light {
+            position: relative;
+            bottom: -100px;
+            right: -1050px;
+            z-index: 2;
+        }
+    }
+}
+
+
+
+.swiper-slide {
+    position: relative;
+}
+
+
+.custom-prev,
+.custom-next {
+    position: absolute;
+    top: 115%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
+    width: 40px;
+    height: 40px;
+}
+
+.custom-prev {
+    left: 40%;
+}
+
+.custom-next {
+    right: 40%;
+}
+
+// .swiper-pagination {
+//     position: absolute;
+//     bottom: -20px;
+//     left: 50%;
+//     transform: translateY(-50%);
+// }
+
+
+// .swiper-pagination {
+//     position: absolute;
+//     bottom: -40px;
+//     left: 50%;
+//     transform: translateX(-50%);
+//     z-index: 5;
+//     display: flex;
+//     justify-content: center;
+//     gap: 10px;
+//     overflow: visible;
+// }
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background-color: #fff;
+    opacity: 0.6;
+    transition: opacity 0.3s;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+    background-color: #333;
+}
+
+
+.reverse__arrow {
+    transform: scale(-1);
+    // display: inline-block;
+}
+
+
+
+.nav {
+    margin: 51px auto 0 auto;
+    width: 337px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero .swiper-pagination {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    left: 0;
+    // margin-right: 5px;
+}
+
+.hero .custom-next,
+.hero .custom-prev {
+    position: relative;
+    transform: translate(0);
+    top: 0;
+    left: 0;
+}
+
+.swiper-pagination {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    /* Отступ между точками */
+}
+
+@media screen and (max-width: 768px) {
+    .slides {
+        &__item {
+            height: auto;
+            padding-bottom: 20px;
+        }
+
+        &__item-block {
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        &__dots-light,
+        &__dots {
+            display: none;
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .slides {
+        // &__item {
+        //     // &-title {
+        //     //     // padding: 10px 0 10px 10px;
+        //     // }
+        // }
+
+        &__info {
+            flex-wrap: wrap;
+            margin-left: 30px;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .slides {
+        &__item {
+            width: auto;
+        }
+
+        &__info {
+            flex-wrap: wrap;
+            margin-left: 30px;
+        }
+
+        &__feedback {
+            align-items: center;
+        }
+
+        &__dots-light {
+            left: 570px;
+            top: 45px;
+        }
+    }
+}

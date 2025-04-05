@@ -1,0 +1,139 @@
+@use "/src/sass/base/variables.scss" as *;
+@use "/src/sass/base/mixins.scss" as mixins;
+
+.services {
+    margin-top: 222px;
+    position: relative;
+
+    h2 {
+        @include mixins.section-title;
+    }
+
+    &__descr {
+        width: 952px;
+        color: $grey;
+        font-size: 18px;
+        font-weight: 300;
+        line-height: 30px;
+        text-align: center;
+        margin: 33px auto;
+    }
+
+    &__wrapper {
+        margin-top: 80px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 36px 37px;
+        // row-gap: 36px;
+        // column-gap: 130px;
+
+        &-item {
+            width: 350px;
+            height: 354px;
+            border-radius: 20px;
+            padding: 47px 50px 47px 38px;
+            box-shadow: 10px 40px 50px 0px rgba(229, 233, 246, 0.4);
+            background: rgb(255, 255, 255);
+            transition: all 0.5s;
+
+            &:hover {
+                cursor: pointer;
+                transform: scale(1.05);
+                border: 2px solid $light-blue;
+            }
+        }
+
+        &-subtitle {
+            margin-top: 15px;
+            color: $black;
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 56px;
+            text-align: left;
+        }
+
+        &-descr {
+            margin-top: 5px;
+            margin-bottom: 47px;
+            color: $grey;
+            font-size: 16px;
+            font-weight: 300;
+            line-height: 28px;
+            text-align: left;
+        }
+    }
+
+    &__dots {
+        position: absolute;
+        right: 280px;
+        top: 550px;
+        z-index: -1;
+    }
+
+    &__button {
+        display: block;
+        width: 200px;
+        height: 60px;
+        color: $light-blue;
+        font-size: 18px;
+        font-weight: 700;
+        border: 1px solid $light-blue;
+        border-radius: 55px;
+        background-color: $light;
+        margin: 72px auto;
+        cursor: pointer;
+
+        &:hover {
+            background-color: $light-blue;
+            border: none;
+            color: $light;
+        }
+    }
+}
+
+.wrapper-item {
+    &_block {
+        width: 260px;
+        height: 262px;
+        margin: 47px 50px 47px 38px;
+    }
+}
+
+.divider {
+    margin: 26px auto;
+}
+
+@media screen and (max-width: 768px) {
+    .services {
+        &__wrapper {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            &-item {
+                width: 80%;
+            }
+        }
+
+        &__descr {
+            width: 100%;
+        }
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .services {
+
+        &__wrapper {
+            grid-template-columns: repeat(2, 1fr);
+
+            &-item {
+                height: auto;
+            }
+        }
+
+        &__descr {
+            width: 80%;
+        }
+    }
+}
